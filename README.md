@@ -1,2 +1,2 @@
 # MSAN
-Molecular Substructure-Aware Network for Drug-drug Interaction Prediction
+Molecular Substructure-Aware Network for Drug-Drug Interaction Prediction
