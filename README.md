@@ -7,5 +7,7 @@ Molecular Substructure-Aware Network for Drug-Drug Interaction Prediction
 
 ## Run
 Run by command line, e.g.:
+
 `python ddi_main.py --device cuda --dataset DrugBank --hidden_dim 128 --num_patterns 60 --batch_size 256`
+
 For detailed command line options, see `ddi_main.py`
