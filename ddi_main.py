@@ -104,7 +104,8 @@ if __name__ == "__main__":
         train_tranductive(model, args)
     else:
         train_inductive(model, args)
-
+    
+    """
     if args.dataset != "drugbank":
         set_all_seeds(1)
     
@@ -126,3 +127,4 @@ if __name__ == "__main__":
         train_tranductive(model, args)
     else:
         train_inductive(model, args)
+    """
