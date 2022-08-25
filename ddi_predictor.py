@@ -117,7 +117,7 @@ class InteractionPredictor(nn.Module):
             sub_to_drop = sub_cnt.argmax(dim=-1, keepdim=True)
         
         else:
-            raise NotImplemented("Unsupported GNN Model")
+            raise NotImplemented("Unsupported Sub drop mode")
 
         return sub_to_drop
     
