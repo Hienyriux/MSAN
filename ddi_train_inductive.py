@@ -51,14 +51,14 @@ def evaluate(model, loader, set_len):
     for batch in loader:
         graph_batch_1, graph_batch_2, \
         graph_batch_old_1, graph_batch_old_2, \
-        rel, y_true = batch
+        ddi_type, y_true = batch
         
         y_pred = model.forward_func(
             graph_batch_1, graph_batch_2,
             graph_batch_old_1, graph_batch_old_2, ddi_type
         )
         
-        y_pred_all.append(y_pred.detach().sigmoid().cpu())
+        y_pred_all.append(y_pred.detach().cpu())
         y_true_all.append(torch.LongTensor(y_true))
         
         cur_num += graph_batch_1.num_graphs // 2
