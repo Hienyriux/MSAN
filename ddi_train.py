@@ -140,7 +140,11 @@ def train(model, args):
             loss.backward()
             optimizer.step()
             
-            cur_num += graph_batch_1.num_graphs // 2
+            if args.dataset == "drugbank":
+                cur_num += graph_batch_1.num_graphs // 2
+            else:
+                cur_num += graph_batch_1.num_graphs
+            
             sys.stdout.write(
                 f"\r{cur_num} / {train_set_len}, "
                 f"{(train_loss / (i + 1)):.6f}, "
