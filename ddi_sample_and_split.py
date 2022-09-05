@@ -392,42 +392,17 @@ def sample_inductive_neg(fold, seed=0):
     
     print()
 
-def compare():
-    with open("dataset/drugbank_train_0.json", "r") as f:
-        data_0_a = f.read()
-    
-    with open("dataset/drugbank_train_0_.json", "r") as f:
-        data_0_b = f.read()
+#get_pairs_drugbank()
+#get_pairs_miracle("zhang")
+#get_pairs_miracle("miner")
+#get_pairs_miracle("deep")
 
-    with open("dataset/drugbank_train_1.json", "r") as f:
-        data_1_a = f.read()
-    
-    with open("dataset/drugbank_train_1_.json", "r") as f:
-        data_1_b = f.read()
+#split_drugbank_transductive(num_folds=3, seed=0)
 
-    with open("dataset/drugbank_train_2.json", "r") as f:
-        data_2_a = f.read()
-    
-    with open("dataset/drugbank_train_2_.json", "r") as f:
-        data_2_b = f.read()
+#split_drugbank_inductive(fold=0, seed=0)
+#split_drugbank_inductive(fold=1, seed=1)
+#split_drugbank_inductive(fold=2, seed=2)
 
-    print(data_0_a == data_0_b)
-    print(data_1_a == data_1_b)
-    print(data_2_a == data_2_b)
-
-get_pairs_drugbank()
-##get_pairs_miracle("zhang")
-##get_pairs_miracle("miner")
-##get_pairs_miracle("deep")
-
-split_drugbank_transductive(num_folds=3, seed=0)
-
-##split_drugbank_inductive(fold=0, seed=0)
-##split_drugbank_inductive(fold=1, seed=1)
-##split_drugbank_inductive(fold=2, seed=2)
-##
-##sample_inductive_neg(fold=0, seed=0)
-##sample_inductive_neg(fold=1, seed=0)
-##sample_inductive_neg(fold=2, seed=0)
-
-compare()
+#sample_inductive_neg(fold=0, seed=0)
+#sample_inductive_neg(fold=1, seed=0)
+#sample_inductive_neg(fold=2, seed=0)
