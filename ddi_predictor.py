@@ -225,11 +225,11 @@ class InteractionPredictor(nn.Module):
         
         return score
     
-    def forward_inductive(self, graph_batch_1, graph_batch_2, graph_batch_old_1, graph_batch_old_2, rel):
+    def forward_inductive(self, graph_batch_1, graph_batch_2, graph_batch_old_1, graph_batch_old_2, ddi_type):
         out_1, pool_1 = self.encode_graph(graph_batch_1)
         out_2, pool_2 = self.encode_graph(graph_batch_2)
         
-        score = self.predict(out_1, out_2, pool_1, pool_2, rel)
+        score = self.predict(out_1, out_2, pool_1, pool_2, ddi_type)
 
         if self.training:
             return score
@@ -237,7 +237,7 @@ class InteractionPredictor(nn.Module):
         old_out_1, old_pool_1 = self.encode_graph(graph_batch_old_1)
         old_out_2, old_pool_2 = self.encode_graph(graph_batch_old_2)
         
-        score_old = self.predict(old_out_1, old_out_2, old_pool_1, old_pool_2, rel)
+        score_old = self.predict(old_out_1, old_out_2, old_pool_1, old_pool_2, ddi_type)
         
         score = torch.stack([score, score_old]).sigmoid().mean(dim=0)
         
