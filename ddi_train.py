@@ -22,10 +22,10 @@ def calc_metrics(y_pred, y_true):
     
     acc = metrics.accuracy_score(y_true, y_pred_label)
     auc = metrics.roc_auc_score(y_true, y_pred)
-    f1 = metrics.f1_score(y_true, y_pred_label)
+    f1 = metrics.f1_score(y_true, y_pred_label, zero_division=0)
     
-    p = metrics.precision_score(y_true, y_pred_label)
-    r = metrics.recall_score(y_true, y_pred_label)
+    p = metrics.precision_score(y_true, y_pred_label, zero_division=0)
+    r = metrics.recall_score(y_true, y_pred_label, zero_division=0)
     ap = metrics.average_precision_score(y_true, y_pred)
     
     return acc, auc, f1, p, r, ap
