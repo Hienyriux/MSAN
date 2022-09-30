@@ -58,7 +58,7 @@ def main():
     
     parser.add_argument("--gin_nn_layers", type=int, default=5)
     
-    parser.add_argument("--num_patterns", type=int, default=40)
+    parser.add_argument("--num_patterns", type=int, default=60)
     parser.add_argument("--attn_out_residual", action="store_true", default=False)
     parser.add_argument("--dropout", type=float, default=0.5)
     parser.add_argument("--pred_mlp_layers", type=int, default=3)
