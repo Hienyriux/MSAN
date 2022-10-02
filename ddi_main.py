@@ -97,7 +97,7 @@ if __name__ == "__main__":
     if args.dataset != "drugbank":
         args.inductive = False
     
-    args.fold = 0
+    #args.fold = 0
     model = InteractionPredictor(args).to(args.device)
     
     if not args.inductive:
