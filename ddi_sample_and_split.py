@@ -377,15 +377,15 @@ def sample_inductive_neg(fold, seed=0):
     pos_pairs, num_drugs, num_ddi_types = get_pos_pairs_drugbank()
     data_stats = get_data_stats_drugbank(pos_pairs, num_ddi_types)
     
-    train_sampled = sample_inductive_neg_proc(
+    sample_inductive_neg_proc(
         data_stats, drugs_old, drugs_new,
         "train", fold, seed
     )
-    either_sampled = sample_inductive_neg_proc(
+    sample_inductive_neg_proc(
         data_stats, drugs_old, drugs_new,
         "either", fold, seed,
     )
-    both_sampled = sample_inductive_neg_proc(
+    sample_inductive_neg_proc(
         data_stats, drugs_old, drugs_new,
         "both", fold, seed
     )
