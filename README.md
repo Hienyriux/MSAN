@@ -1,5 +1,5 @@
 # MSAN
-Molecular Substructure-Aware Network for Drug-Drug Interaction Prediction
+Molecular Substructure-Aware Network for Drug-Drug Interaction Prediction (CIKM'22, Short)
 
 ## Requirements
 * torch==1.9.1
