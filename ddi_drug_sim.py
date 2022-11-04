@@ -55,7 +55,7 @@ def get_mol_fp(dataset_name):
     
     fp_list = torch.stack(fp_list).float()
     
-    torch.save(fp_list, f"dataset/{dataset_name}_mol_fp_.pt")
+    torch.save(fp_list, f"dataset/{dataset_name}_mol_fp.pt")
 
 def get_tanimoto(dataset_name):
     mol_fp = torch.load(f"dataset/{dataset_name}_mol_fp.pt")
@@ -81,7 +81,7 @@ def get_tanimoto(dataset_name):
     print()
     tanimoto_mat = torch.Tensor(tanimoto_mat)
     
-    torch.save(tanimoto_mat, f"dataset/{dataset_name}_tanimoto_.pt")
+    torch.save(tanimoto_mat, f"dataset/{dataset_name}_tanimoto.pt")
 
 #get_mol_fp("drugbank")
 #get_tanimoto("drugbank")
