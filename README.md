@@ -13,4 +13,4 @@ Run by command line, e.g.:
 For detailed command line options, see `ddi_main.py`
 
 ## More Experiments in the inductive setting
-You can find results and discussions of more Experiments in the inductive setting in `ddi_supp.pdf`
+You can find results and discussions on more experiments in the inductive setting in `ddi_supp.pdf`
