@@ -1,5 +1,5 @@
 # MSAN
-Molecular Substructure-Aware Network for Drug-Drug Interaction Prediction (CIKM'22, Short)
+Molecular Substructure-Aware Network for Drug-Drug Interaction Prediction
 
 ## Requirements
 * torch==1.9.1
@@ -11,3 +11,6 @@ Run by command line, e.g.:
 `python ddi_main.py --device cuda --dataset DrugBank --hidden_dim 128 --num_patterns 60 --batch_size 256`
 
 For detailed command line options, see `ddi_main.py`
+
+## More Experiments in the inductive setting
+You can find results and discussions of more Experiments in the inductive setting in `ddi_supp.pdf`
