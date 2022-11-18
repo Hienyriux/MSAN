@@ -11,6 +11,3 @@ Run by command line, e.g.:
 `python ddi_main.py --device cuda --dataset DrugBank --hidden_dim 128 --num_patterns 60 --batch_size 256`
 
 For detailed command line options, see `ddi_main.py`
-
-## More experiments in the inductive setting
-You can find results and discussions on more experiments in the inductive setting in `ddi_supp.pdf`
