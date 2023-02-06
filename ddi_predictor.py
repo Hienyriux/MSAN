@@ -41,7 +41,7 @@ def get_gnn_model(args):
         ) for i in range(gnn_num_layers)])
     
     else:
-        raise NotImplemented("Unsupported GNN Model")
+        raise NotImplementedError("Unsupported GNN Model")
 
 class InteractionPredictor(nn.Module):
     def __init__(self, args):
@@ -117,7 +117,7 @@ class InteractionPredictor(nn.Module):
             sub_to_drop = sub_cnt.argmax(dim=-1, keepdim=True)
         
         else:
-            raise NotImplemented("Unsupported Sub drop mode")
+            raise NotImplementedError("Unsupported Sub drop mode")
 
         return sub_to_drop
     
